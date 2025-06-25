@@ -18,6 +18,18 @@ def _(mo):
 
 @app.cell
 def _(mo):
+    mo.md(r"""Hi, this is Audrey M. Roy Greenfeld, walking you through building Air websites by example. Here we start with the smallest possible example of a working Air site.""")
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""## Starter Imports""")
+    return
+
+
+@app.cell
+def _(mo):
     mo.md(r"""The minimal imports you need to get started are:""")
     return
 
@@ -28,11 +40,29 @@ def _(mo):
         r"""
     ```python
     from fastapi import FastAPI
-    from air import tags
+    from air import tags as __
     from air.responses import TagResponse
     ```
     """
     )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    I like the `__` because it makes Air views more readable. As you compose more complex views, you'll appreciate it.
+
+    If the `__` bothers you, use `t` or `tags`.
+    """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""## What's an Air Website?""")
     return
 
 
@@ -56,6 +86,12 @@ def _(mo):
 
 @app.cell
 def _(mo):
+    mo.md(r"""## Views""")
+    return
+
+
+@app.cell
+def _(mo):
     mo.md(r"""The simplest Air site has just 1 view. Here, this view returns a simple HTML page with a H1 on it.""")
     return
 
@@ -67,7 +103,7 @@ def _(mo):
     ```python
     @app.get("/", response_class=TagResponse)
     def home():
-        return tags.H1("Hello, world")
+        return __.H1("Hello, world")
     ```
     """
     )
