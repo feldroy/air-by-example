@@ -1,5 +1,8 @@
 # air-by-example
+
 The "Air by Example" book
+
+## Quickstart
 
 Install fastapi with the CLI:
 
